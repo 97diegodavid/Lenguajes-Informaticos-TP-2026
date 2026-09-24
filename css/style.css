@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box; /* */
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --color-primario: #943194;
+    --color-secundario: #FF6347;
+    --color-fondo: #F5F5F5;
+    --color-texto: #c0bb6f;
+
+}
+
+/* Contenedor principal de la barra de navegación */
+.menu{
+    background-color: var(--color-primario);
+    height: 60px;
+    width: 100%;
+   position: fixed;   /* Mantiene la barra fija en la parte superior al hacer scroll */
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;    /* Asegura que el menú quede por encima de otros elementos */
+
+
+}
+/* Lista no ordenada (contenedor de los ítems del menú) */
+.menu ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+.menu  a{
+    font-family: oswald, sans-serif;
+    text-decoration: none;
+    color:var(--color-texto);
+    padding: 0.5rem 1rem;
+}
+
+.menu a:hover {
+    color: var(--color-secundario);    /* Cambia el texto al color secundario al posicionar el ratón */
+}
