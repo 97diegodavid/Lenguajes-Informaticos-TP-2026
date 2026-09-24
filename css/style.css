@@ -7,8 +7,8 @@
 :root{
     --color-primario: #943194;
     --color-secundario: #FF6347;
-    --color-fondo: #F5F5F5;
-    --color-texto: #c0bb6f;
+    --color-texto-principal: #F5F5F5;
+    --color-titulos: #c0bb6f;
 
 }
 
@@ -36,10 +36,45 @@
 .menu  a{
     font-family: oswald, sans-serif;
     text-decoration: none;
-    color:var(--color-texto);
+    color:var(--color-titulos);
     padding: 0.5rem 1rem;
 }
 
 .menu a:hover {
     color: var(--color-secundario);    /* Cambia el texto al color secundario al posicionar el ratón */
+}
+
+h1{
+    font-family: oswald, sans-serif;
+    color: var(--color-titulos);
+    text-align: center;
+    margin-top: 100px; /* Ajusta el margen superior para que el título no quede oculto detrás del menú */
+}
+
+.imagen-ciudad{
+    display: block;
+    margin: 20px auto; /* Centra la imagen horizontalmente */
+    max-width: 1920px; /* Ajusta el tamaño máximo de la imagen */
+    height: 1080px; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados para un efecto estético */
+}
+
+.historia{
+    background-color: var(--color-secundario); /* Fondo de la sección de historia */
+    padding: 40px 20px; /* Espaciado interno para separar el contenido del borde */
+}
+.historia p{
+    font-family: oswald, sans-serif;
+    font-size: 1.2rem;
+    color: var(--color-texto-principal);
+    text-align: center;
+    margin: 20px auto; /* Centra el párrafo horizontalmente */
+    max-width: 800px; /* Ajusta el ancho máximo del párrafo */
+}
+
+h2{
+    font-family: oswald, sans-serif;
+    color: var(--color-titulos);
+    text-align: center;
+    margin-top: 40px; /* Ajusta el margen superior para separar el título del contenido anterior */
 }
