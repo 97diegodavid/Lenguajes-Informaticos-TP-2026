@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --color-primario: #943194;
+    --color-secundario: #FF6347;
+    --color-texto-principal: #F5F5F5;
+    --color-titulos: #c0bb6f;
+    --color-fondo: #1e1e1e;
+    --color-tarjeta: #2b2b2b;
+}
+
+body {
+    font-family: Oswald, Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto-principal);
+}
+
+/* Encabezado de la página */
+header {
+    background-color: var(--color-primario);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+header h1 {
+    color: var(--color-titulos);
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 1.3rem;
+    color: var(--color-texto-principal);
+}
+
+/* Contenido principal */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+/* Tarjetas de cada lugar */
+.lugar {
+    background-color: var(--color-tarjeta);
+    padding: 35px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    border-left: 8px solid var(--color-secundario);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.lugar h2 {
+    color: var(--color-titulos);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.lugar p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.lugar ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.lugar li {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    padding: 15px;
+    background-color: rgba(255, 99, 71, 0.15);
+    border-radius: 10px;
+}
+
+.lugar strong {
+    color: var(--color-titulos);
+}
+
+/* Separadores */
+hr {
+    border: none;
+    height: 2px;
+    background-color: var(--color-secundario);
+    margin: 35px 0;
+}
+
+/* Pie de página */
+footer {
+    background-color: var(--color-primario);
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+footer p {
+    color: var(--color-texto-principal);
+    font-size: 1rem;
+}
+
+/* Adaptación para celular */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    .lugar {
+        padding: 22px;
+    }
+
+    .lugar h2 {
+        font-size: 1.5rem;
+    }
+
+    .lugar p,
+    .lugar li {
+        font-size: 1rem;
+    }
+}
