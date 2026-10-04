@@ -282,3 +282,148 @@ h2{
     color: #F5F5F5;
     font-size: 1rem;
 }
+/* ==============================
+
+   CONTACTO
+
+   ============================== */
+
+#informacion-contacto {
+
+    max-width: 900px;
+
+    margin: 30px auto;
+
+    padding: 25px;
+
+}
+
+#informacion-contacto h2 {
+
+    color: #6a1b9a;
+
+    margin-bottom: 15px;
+
+}
+
+#informacion-contacto p {
+
+    line-height: 1.6;
+
+}
+
+#informacion-contacto address {
+
+    font-style: normal;
+
+    margin-top: 20px;
+
+}
+
+#informacion-contacto address p {
+
+    margin: 12px 0;
+
+}
+
+#informacion-contacto a {
+
+    color: #6a1b9a;
+
+    text-decoration: none;
+
+}
+
+#informacion-contacto a:hover {
+
+    text-decoration: underline;
+
+}
+
+/* Horarios de atención */
+
+main section:not(#informacion-contacto) {
+
+    max-width: 900px;
+
+    margin: 30px auto;
+
+    padding: 25px;
+
+}
+
+main section h2 {
+
+    color: #6a1b9a;
+
+    margin-bottom: 15px;
+
+}
+
+main section ul {
+
+    padding-left: 25px;
+
+}
+
+main section li {
+
+    margin-bottom: 8px;
+
+}
+
+/* Redes sociales */
+
+main section a {
+
+    color: #6a1b9a;
+
+    font-weight: bold;
+
+}
+
+main section a:hover {
+
+    text-decoration: underline;
+
+}
+
+/* Información adicional */
+
+main aside {
+
+    max-width: 900px;
+
+    margin: 30px auto;
+
+    padding: 25px;
+
+    border-left: 5px solid #6a1b9a;
+
+}
+
+main aside h2 {
+
+    color: #6a1b9a;
+
+}
+
+main aside p {
+
+    line-height: 1.6;
+
+}
+
+main aside a {
+
+    color: #6a1b9a;
+
+    text-decoration: none;
+
+}
+
+main aside a:hover {
+
+    text-decoration: underline;
+
+}
