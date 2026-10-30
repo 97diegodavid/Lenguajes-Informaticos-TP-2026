@@ -1,3 +1,4 @@
+
 *{
     box-sizing: border-box; /* */
     padding: 0;
@@ -113,7 +114,7 @@ h2{
     margin: 20px 0 20px 0;    
     list-style: none;
     font-size: 1.5rem;
-    padding: 20px 0;gi
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -161,6 +162,7 @@ h2{
     object-fit: cover; 
  }
 
+/*<<<<<<< HEAD*/
 .mapa{
     margin: 20px auto;
     padding: 40px;
@@ -194,4 +196,276 @@ h2{
     /* fin de estilos de  la  seccion cuiudad*/
 
 
+
+
+
+
+/* ESTILOS DEL INDEX.HTML - PÁGINA DE INICIO */
+
+/* Estilos generales */
+.pagina-inicio {
+    background-color: #1e1e1e;
+    color: #F5F5F5;
+    font-family: Oswald, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Encabezado */
+.inicio-header {
+    background-color: #943194;
+    text-align: center;
+    padding: 40px 20px 80px;
+}
+
+.inicio-header h1 {
+    color: #c0bb6f;
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.inicio-header p {
+    color: #F5F5F5;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+/* Contenido principal */
+.inicio-main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Secciones */
+.inicio-seccion {
+    background-color: #2b2b2b;
+    color: #F5F5F5;
+    padding: 35px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    border-left: 8px solid #FF6347;
+}
+
+/* Títulos */
+.inicio-seccion h2 {
+    color: #c0bb6f;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.inicio-seccion h3 {
+    color: #c0bb6f;
+    font-size: 1.5rem;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+/* Párrafos */
+.inicio-seccion p {
+    color: #F5F5F5;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Listas: fondo oscuro y texto claro */
+.inicio-seccion ul,
+.inicio-seccion ol {
+    background-color: #2b2b2b !important;
+    color: #F5F5F5 !important;
+    margin: 15px 0 25px 25px;
+    padding: 15px 20px 15px 40px;
+    border-radius: 10px;
+}
+
+/* Elementos de las listas */
+.inicio-seccion ul li,
+.inicio-seccion ol li {
+    background-color: #2b2b2b !important;
+    color: #F5F5F5 !important;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Imágenes */
+.inicio-imagen {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 25px auto;
+    border-radius: 10px;
+}
+
+/* Enlaces */
+.inicio-enlace {
+    color: #c0bb6f;
+    text-decoration: none;
+}
+
+.inicio-enlace:hover {
+    color: #FF6347;
+    text-decoration: underline;
+}
+
+/* Pie de página */
+.inicio-footer {
+    background-color: #943194;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+.inicio-footer p {
+    color: #F5F5F5;
+    font-size: 1rem;
+}
+/* ==============================
+
+   CONTACTO
+
+   ============================== */
+
+#informacion-contacto {
+
+    max-width: 900px;
+
+    margin: 30px auto;
+
+    padding: 25px;
+
+}
+
+#informacion-contacto h2 {
+
+    color: #6a1b9a;
+
+    margin-bottom: 15px;
+
+}
+
+#informacion-contacto p {
+
+    line-height: 1.6;
+
+}
+
+#informacion-contacto address {
+
+    font-style: normal;
+
+    margin-top: 20px;
+
+}
+
+#informacion-contacto address p {
+
+    margin: 12px 0;
+
+}
+
+#informacion-contacto a {
+
+    color: #6a1b9a;
+
+    text-decoration: none;
+
+}
+
+#informacion-contacto a:hover {
+
+    text-decoration: underline;
+
+}
+
+/* Horarios de atención */
+
+main section:not(#informacion-contacto) {
+
+    max-width: 900px;
+
+    margin: 30px auto;
+
+    padding: 25px;
+
+}
+
+main section h2 {
+
+    color: #6a1b9a;
+
+    margin-bottom: 15px;
+
+}
+
+main section ul {
+
+    padding-left: 25px;
+
+}
+
+main section li {
+
+    margin-bottom: 8px;
+
+}
+
+/* Redes sociales */
+
+main section a {
+
+    color: #6a1b9a;
+
+    font-weight: bold;
+
+}
+
+main section a:hover {
+
+    text-decoration: underline;
+
+}
+
+/* Información adicional */
+
+main aside {
+
+    max-width: 900px;
+
+    margin: 30px auto;
+
+    padding: 25px;
+
+    border-left: 5px solid #6a1b9a;
+
+}
+
+main aside h2 {
+
+    color: #6a1b9a;
+
+}
+
+main aside p {
+
+    line-height: 1.6;
+
+}
+
+main aside a {
+
+    color: #6a1b9a;
+
+    text-decoration: none;
+
+}
+
+main aside a:hover {
+
+    text-decoration: underline;
+
+}
 
