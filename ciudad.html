@@ -10,30 +10,56 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     
+    <!-- Bootstrap CSS — antes del CSS propio -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS propio del sitio -->
     <link rel="stylesheet" href="css/style.css"> 
+
+    <!-- Bootstrap JS — antes del </body> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
     <title>Ciudad-Aurora</title>
 </head>
 <body>
      <header>
-        <nav class="menu">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="ciudad.html">La ciudad</a></li>
-                <li><a href="lugares.html">Lugares de interés</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+         <!-- Bootstrap aplicado a la barra de navegación -->
+
+        <nav class=" menu navbar navbar-expand-sm  fixed-top pt-3">
+            <div class="container-fluid  ">         
+
+                <a class="navbar-brand" href="#" >AURORA </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ciudad.html">La ciudad</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="lugares.html">Lugares de interés</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main>
         <div>
             <h1>Ciudad de AURORA</h1>
-            <div>
+            <div class="container-fluid d-flex justify-content-center">
                 <img class="imagen-ciudad" src="img/aerea-aurora.jpg" alt="Vista panorámica de la ciudad de Aurora">
             </div>
         </div>
-        <section>
+        <section class="ciudad container-fluid">
             <h1>Historia e Identidad de la Ciudad</h1>
             <p>Aurora es una ciudad donde la cultura, la historia y la naturaleza se encuentran. Destaca por sus amplios espacios verdes, su fuerte identidad cultural y sus propuestas adaptadas para visitantes de todas las edades.<br>
                Fundada a finales del siglo XIX por colonos que buscaban un refugio rodeado de bosque, 
@@ -42,7 +68,7 @@
 
             </p>
         </section>
-        <section>
+        <section class="ciudad container-fluid">
             <h2>Información clave de la ciudad:</h2>
             <dl class="informacion-ciudad">
                 <dt>Año de fundación:</dt>
@@ -55,20 +81,41 @@
                 <dd>Valle Verde, entre colinas costeras y ríos de agua cristalina</dd>
             </dl>
         </section>
-        <section>
+
+        <section class="ciudad container-fluid bg-dark">
             <h2>Características Principales</h2>
             <ul class="caracteristicas">
                 <li><strong>Cinturón Verde:</strong> La ciudad está rodeada por un parque nacional protegido que impide la expansión urbana descontrolada y garantiza el aire limpio.</li>
                 <li><strong>Red de Transporte Limpio:</strong> Sistema masivo de tranvías eléctricos de alta velocidad y una red interconectada de ciclovías elevadas.</li>
                 <li><strong>Arquitectura Biofílica:</strong> Los edificios modernos integran jardines verticales, paneles solares de cristal y canales de agua salada que atraviesan las avenidas principales.</li>
             </ul>
-            <div class="caracteristicas-img">
-                <img src="img/principal-1.jpg" alt="Imagen de la ciudad de Aurora">
-                <img src="img/principal-2.jpg" alt="Imagen de la ciudad de Aurora">
-                <img src="img/principal-3.jpg" alt="Imagen de la ciudad de Aurora">
-            </div>  
-
-        </section>
+            <div class="row flex-column gap-3 gap-md-0 flex-md-row justify-content-center">     
+                    <div class="col caracteristicas-img card" style="width: 400px;">
+                        <img class="card-img-top mt-3" src="img/principal-1.jpg" alt="Imagen de la ciudad de Aurora">
+                        <div class="card-body">
+                            <h4 class="card-title">Cinturón Verde</h4>
+                            <p class="card-text text-dark"> Parque nacional protegido .</p>
+                            <a href="#" class="btn btn-primary">Rutas y actividades</a>
+                        </div>
+                    </div>
+                    <div class="col caracteristicas-img card" style="width: 400px;">
+                        <img class="card-img-top mt-3" src="img/principal-2.jpg" alt="Imagen de la ciudad de Aurora">
+                        <div class="card-body">
+                            <h4 class="card-title">Red de Transporte Limpio</h4>
+                            <p class="card-text text-dark"> Tranvías eléctricos de alta velocidad .</p>
+                            <a href="#" class="btn btn-primary">Red y mapas</a>
+                        </div>
+                    </div>
+                    <div class="col caracteristicas-img card" style="width: 400px;">
+                        <img class="card-img-top mt-3" src="img/principal-3.jpg" alt="Imagen de la ciudad de Aurora">
+                        <div class="card-body">
+                            <h4 class="card-title">Arquitectura Biofílica</h4>
+                            <p class="card-text text-dark"> Jardines verticales, paneles solares de cristal y canales de agua .</p>
+                            <a href="#" class="btn btn-primary">Arquitecturas</a>
+                        </div>
+                    </div>  
+            </div>
+        </section class="ciudad container-fluid">
         <div class="barrios">
             <h2>Barrios y Zonas</h2>
             <div>
@@ -104,10 +151,14 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.1525625656973!2d2.2830113765862547!3d41.468802090940464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4ba6883688f3f%3A0xb5a6811c9d8f6c8b!2sCarrer%20d'Aurora%20Bertrana%20i%20Sala%2C%2008390%20Montgat%2C%20Barcelona%2C%20Espa%C3%B1a!5e1!3m2!1ses-419!2sar!4v1789218913474!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
     </div>
         
-    <footer>
+    <footer class="inicio-footer">
 
         <p>&copy; 2026 Aurora - Sitio turístico ficticio</p>
     </footer>
+
+    <!-- Bootstrap JS — antes del </body> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
 
 </body>
 </html>

@@ -23,17 +23,6 @@ main{
 /* Contenedor principal de la barra de navegación */
 .menu{
     background-color: var(--color-primario);
-    height: 60px;
-    width: 100%;
-   position: fixed;   /* Mantiene la barra fija en la parte superior al hacer scroll */
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;    /* Asegura que el menú quede por encima de otros elementos */
-
-
 }
 /* Lista no ordenada (contenedor de los ítems del menú) */
 .menu ul{
@@ -43,8 +32,8 @@ main{
 }
 .menu  a{
     font-family: oswald, sans-serif;
-    text-decoration: none;
-    color:var(--color-titulos);
+    text-decoration: none;  
+    color:var(--color-titulos); 
     padding: 0.5rem 1rem;
 }
 
@@ -69,11 +58,13 @@ h1{
     height: 1080px; /* Mantiene la proporción de la imagen */
     border-radius: 10px; /* Bordes redondeados para un efecto estético */
 }
-
-section{
+.ciudad{
     background-color: var(--color-secundario); /* Fondo de la sección de historia */
     padding: 5px 120px; /* Espaciado interno para separar el contenido del borde */
+    
+    
 }
+
 section p{
     font-family: oswald, sans-serif;
     font-size: 1.2rem;
@@ -83,7 +74,7 @@ section p{
     max-width: 800px; /* Ajusta el ancho máximo del párrafo */
 }
 
-h2{
+.ciudad h2{
     font-family: oswald, sans-serif;
     color: var(--color-titulos);
     text-align: center;
@@ -119,10 +110,11 @@ h2{
 }
 
 
-
+/*
+Se controla mediante bootstrap, pero se puede personalizar con CSS si es necesario.
 .caracteristicas-img{
     height: 400px;
-    width: 100%;
+    width: 400px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -130,7 +122,7 @@ h2{
     margin: 20px 0 20px 0;
 
 }
-
+*/
 .barrios{
     display: flex;
     flex-direction: column;
@@ -139,6 +131,9 @@ h2{
 
 .barrios h2{
     font-size: 3rem;
+    text-align: center;
+    margin-top: 40px;
+    color: var(--color-titulos);
 }
 
 .barrios div{
@@ -383,7 +378,8 @@ h2{
 
 /* Horarios de atención */
 
-main section:not(#informacion-contacto) {
+/*sobrescribe todo lo que se hizo en la seccion de contacto, para que no afecte a las otras secciones del main
+section:not(#informacion-contacto) {
 
     max-width: 900px;
 
@@ -391,7 +387,7 @@ main section:not(#informacion-contacto) {
 
     padding: 25px;
 
-}
+}*/
 
 main section h2 {
 
