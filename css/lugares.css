@@ -1,12 +1,12 @@
 
-/* Estilos generales */
+/* =========================================
+   ESTILOS GENERALES
+========================================= */
+
 * {
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
 }
 
-/* Variables de colores */
 :root {
     --color-primario: #943194;
     --color-secundario: #FF6347;
@@ -16,103 +16,208 @@
     --color-tarjeta: #2b2b2b;
 }
 
-/* Estilos generales de la página */
 body {
     font-family: Oswald, Arial, sans-serif;
     background-color: var(--color-fondo);
     color: var(--color-texto-principal);
 }
 
-/* Encabezado de la página */
+/* =========================================
+   NAVBAR BOOTSTRAP
+========================================= */
+
 header {
     background-color: var(--color-primario);
     text-align: center;
-    padding: 25px 20px;
+}
+
+header .navbar {
+    background-color: var(--color-fondo) !important;
+}
+
+.navbar-brand {
+    color: var(--color-titulos) !important;
+    font-size: 1.6rem;
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 12px;
+}
+
+.navbar .nav-link {
+    color: var(--color-texto-principal);
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--color-titulos);
 }
 
 header h1 {
     color: var(--color-titulos);
-    font-size: 3rem;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 header p {
-    font-size: 1.3rem;
     color: var(--color-texto-principal);
 }
 
-/* Contenido principal */
+/* =========================================
+   CONTENIDO PRINCIPAL
+========================================= */
+
 main {
-    width: 90%;
-    max-width: 1100px;
-    margin: 40px auto;
+    padding-top: 20px;
+    padding-bottom: 30px;
 }
 
-/* Tarjetas de cada lugar */
-.lugar {
-    background-color: var(--color-tarjeta);
-    padding: 35px;
-    margin-bottom: 40px;
-    border-radius: 15px;
-    border-left: 8px solid var(--color-secundario);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
-}
-
-.lugar h2 {
+main h2 {
     color: var(--color-titulos);
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 25px;
 }
 
-.lugar p {
-    font-size: 1.2rem;
+/* =========================================
+   TARJETAS BOOTSTRAP
+========================================= */
+
+.lugar.card {
+    background-color: var(--color-tarjeta);
+    color: var(--color-texto-principal);
+    border: 1px solid var(--color-secundario);
+    border-left: 6px solid var(--color-secundario);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.lugar.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5) !important;
+}
+
+.lugar .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 25px;
+}
+
+.lugar .card-title {
+    color: var(--color-titulos);
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+.lugar .card-text {
+    color: var(--color-texto-principal);
     line-height: 1.7;
-    text-align: justify;
-    margin-bottom: 20px;
 }
 
 .lugar ul {
+    padding-left: 0;
     list-style: none;
-    margin-top: 20px;
 }
 
 .lugar li {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 18px;
-    padding: 15px;
-    background-color: rgba(255, 99, 71, 0.15);
+    padding: 12px;
+    margin-bottom: 12px;
     border-radius: 10px;
+    background-color: rgba(255, 99, 71, 0.12);
+    line-height: 1.6;
 }
 
 .lugar strong {
     color: var(--color-titulos);
 }
 
-/* Separadores */
-hr {
-    border: none;
-    height: 2px;
-    background-color: var(--color-secundario);
-    margin: 35px 0;
+/* =========================================
+   FLEXBOX
+========================================= */
+
+.lugar .card-body {
+    display: flex;
+    flex-direction: column;
 }
 
-/* Pie de página */
-footer {
+.lugar .btn {
+    margin-top: auto;
+    align-self: stretch;
+}
+
+/* =========================================
+   POSICIONAMIENTO
+========================================= */
+
+.lugar.card {
+    position: relative;
+}
+
+.lugar .badge {
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================================
+   PERSONALIZACIONES BOOTSTRAP
+========================================= */
+
+.btn-primary {
     background-color: var(--color-primario);
-    text-align: center;
+    border-color: var(--color-primario);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-secundario);
+    border-color: var(--color-secundario);
+}
+
+.btn-outline-primary {
+    color: var(--color-titulos);
+    border-color: var(--color-titulos);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--color-primario);
+    border-color: var(--color-primario);
+}
+
+.badge.bg-primary {
+    background-color: var(--color-primario) !important;
+}
+
+.alert-info {
+    background-color: var(--color-tarjeta);
+    border-color: var(--color-secundario);
+    color: var(--color-texto-principal);
+}
+
+.alert-info h2 {
+    color: var(--color-titulos);
+}
+
+/* =========================================
+   PIE DE PÁGINA
+========================================= */
+
+footer {
+    background-color: var(--color-fondo) !important;
+    color: var(--color-texto-principal);
     padding: 25px;
-    margin-top: 40px;
+    text-align: center;
 }
 
 footer p {
-    color: var(--color-texto-principal);
-    font-size: 1rem;
+    margin-bottom: 0;
 }
 
-/* Adaptación para celular */
+/* =========================================
+   DISEÑO RESPONSIVO
+========================================= */
+
 @media (max-width: 768px) {
+
     header h1 {
         font-size: 2rem;
     }
@@ -121,19 +226,21 @@ footer p {
         font-size: 1rem;
     }
 
-    main {
-        width: 95%;
+    .navbar-nav {
+        gap: 5px;
+        text-align: left;
+        padding-top: 15px;
     }
 
-    .lugar {
-        padding: 22px;
+    .lugar .card-body {
+        padding: 18px;
     }
 
-    .lugar h2 {
-        font-size: 1.5rem;
+    .lugar .card-title {
+        font-size: 1.3rem;
     }
 
-    .lugar p,
+    .lugar .card-text,
     .lugar li {
         font-size: 1rem;
     }
