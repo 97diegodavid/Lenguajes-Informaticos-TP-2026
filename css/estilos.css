@@ -616,3 +616,369 @@ main aside a:hover {
 #menuAurora .navbar-nav {
     margin: 0 auto;
 }
+
+/* ==================================================
+   ESTILOS DE LUGARES.HTML - LUGARES DE INTERÉS
+   ================================================== */
+
+/* Variables de colores utilizadas en la página de lugares */
+
+.pagina-lugares {
+    --lugares-fondo: #f5f5f5;
+    --lugares-texto: #333333;
+    --lugares-tarjeta: #ffffff;
+    --lugares-titulos: #943194;
+    --lugares-primario: #943194;
+    --lugares-secundario: #FF6347;
+    --lugares-navbar: #943194;
+
+    background-color: var(--lugares-fondo);
+    color: var(--lugares-texto);
+    transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+/* Encabezado de la página */
+
+.pagina-lugares header {
+    background-color: var(--lugares-primario);
+    text-align: center;
+    transition: background-color 0.35s ease;
+}
+
+.pagina-lugares header h1 {
+    color: #c0bb6f;
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.pagina-lugares header p {
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+/* Barra de navegación */
+
+.pagina-lugares header .navbar {
+    background-color: var(--lugares-navbar) !important;
+}
+
+.pagina-lugares .navbar-brand {
+    color: #c0bb6f;
+    font-size: 1.5rem;
+}
+
+.pagina-lugares .navbar-nav {
+    display: flex;
+    gap: 12px;
+}
+
+.pagina-lugares .navbar-nav .nav-link {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.pagina-lugares .navbar-nav .nav-link:hover,
+.pagina-lugares .navbar-nav .nav-link.active {
+    color: #c0bb6f;
+}
+
+/* Botón para cambiar entre modo claro y modo oscuro */
+
+.pagina-lugares #themeToggle {
+    white-space: nowrap;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.pagina-lugares #themeToggle:hover {
+    transform: scale(1.05);
+}
+
+/* Contenido principal */
+
+.pagina-lugares main {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    color: var(--lugares-texto);
+}
+
+.pagina-lugares main h2 {
+    color: var(--lugares-titulos);
+}
+
+/* Tarjetas de los lugares turísticos */
+
+.pagina-lugares .lugar.card {
+    background-color: var(--lugares-tarjeta);
+    color: var(--lugares-texto);
+    border: 1px solid var(--lugares-secundario);
+    border-left: 6px solid var(--lugares-secundario);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease,
+                background-color 0.35s ease,
+                color 0.35s ease;
+}
+
+/* Efecto de movimiento al pasar el cursor */
+
+.pagina-lugares .lugar.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Espaciado interior de las tarjetas */
+
+.pagina-lugares .lugar .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 25px;
+}
+
+/* Títulos de las tarjetas */
+
+.pagina-lugares .lugar .card-title {
+    color: var(--lugares-titulos);
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+/* Texto descriptivo de los lugares */
+
+.pagina-lugares .lugar .card-text {
+    color: var(--lugares-texto);
+    line-height: 1.7;
+}
+
+/* Listas con información de cada lugar */
+
+.pagina-lugares .lugar ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+/* Presentación de cada elemento de las listas */
+
+.pagina-lugares .lugar li {
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    background-color: rgba(148, 49, 148, 0.08);
+    line-height: 1.6;
+}
+
+/* Resaltar los títulos dentro de las descripciones */
+
+.pagina-lugares .lugar strong {
+    color: var(--lugares-titulos);
+}
+
+/* ==================================================
+   ETAPA 3 - FLEXBOX
+   ================================================== */
+
+/* Organización vertical del contenido de las tarjetas */
+
+.pagina-lugares .lugar .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mantener los botones alineados al final de las tarjetas */
+
+.pagina-lugares .lugar .btn {
+    margin-top: auto;
+    align-self: stretch;
+}
+
+/* ==================================================
+   ETAPA 3 - POSICIONAMIENTO
+   ================================================== */
+
+/* Establecer las tarjetas como referencia de posicionamiento */
+
+.pagina-lugares .lugar.card {
+    position: relative;
+}
+
+/* Posicionamiento de las etiquetas de categorías */
+
+.pagina-lugares .lugar .badge {
+    position: relative;
+    z-index: 1;
+}
+
+/* ==================================================
+   PERSONALIZACIÓN DE COMPONENTES BOOTSTRAP
+   ================================================== */
+
+/* Personalización de los botones principales */
+
+.pagina-lugares .btn-primary {
+    background-color: var(--lugares-primario);
+    border-color: var(--lugares-primario);
+}
+
+.pagina-lugares .btn-primary:hover {
+    background-color: var(--lugares-secundario);
+    border-color: var(--lugares-secundario);
+}
+
+/* Personalización de los botones secundarios */
+
+.pagina-lugares .btn-outline-primary {
+    color: var(--lugares-titulos);
+    border-color: var(--lugares-titulos);
+}
+
+.pagina-lugares .btn-outline-primary:hover {
+    background-color: var(--lugares-primario);
+    border-color: var(--lugares-primario);
+    color: #ffffff;
+}
+
+/* Personalización del mensaje informativo */
+
+.pagina-lugares .alert-info {
+    background-color: #eaf0f5;
+    border-color: var(--lugares-secundario);
+    color: var(--lugares-texto);
+}
+
+/* ==================================================
+   PIE DE PÁGINA DE LUGARES
+   ================================================== */
+
+/* Estilos del pie de página */
+
+.pagina-lugares footer {
+    background-color: var(--lugares-primario) !important;
+    color: #ffffff !important;
+    transition: background-color 0.35s ease;
+}
+
+.pagina-lugares footer p {
+    margin-bottom: 0;
+    color: #ffffff;
+}
+
+/* ==================================================
+   MODO OSCURO
+   ================================================== */
+
+/* Modificación de los colores cuando se activa el modo oscuro */
+
+.pagina-lugares.dark-mode {
+    --lugares-fondo: #090b10;
+    --lugares-texto: #e8eaf0;
+    --lugares-tarjeta: #151923;
+    --lugares-titulos: #e5d18a;
+    --lugares-primario: #10131b;
+    --lugares-secundario: #8267e8;
+    --lugares-navbar: #090b10;
+}
+
+/* Cambiar el fondo del encabezado */
+
+.pagina-lugares.dark-mode header {
+    background-color: var(--lugares-primario);
+}
+
+/* Cambiar el color de los enlaces de navegación */
+
+.pagina-lugares.dark-mode .navbar-nav .nav-link {
+    color: var(--lugares-texto);
+}
+
+.pagina-lugares.dark-mode .navbar-nav .nav-link:hover,
+.pagina-lugares.dark-mode .navbar-nav .nav-link.active {
+    color: var(--lugares-titulos);
+}
+
+/* Cambiar los bordes y fondos de las tarjetas */
+
+.pagina-lugares.dark-mode .lugar.card {
+    border-color: #39334f;
+    border-left-color: var(--lugares-secundario);
+}
+
+/* Cambiar el fondo de las listas */
+
+.pagina-lugares.dark-mode .lugar li {
+    background-color: rgba(130, 103, 232, 0.12);
+}
+
+/* Cambiar el fondo del mensaje informativo */
+
+.pagina-lugares.dark-mode .alert-info {
+    background-color: var(--lugares-tarjeta);
+    border-color: var(--lugares-secundario);
+    color: var(--lugares-texto);
+}
+
+/* Personalización de los botones en modo oscuro */
+
+.pagina-lugares.dark-mode .btn-primary {
+    background-color: #5943a8;
+    border-color: var(--lugares-secundario);
+}
+
+.pagina-lugares.dark-mode .btn-primary:hover {
+    background-color: var(--lugares-secundario);
+}
+
+/* ==================================================
+   RESPONSIVE - LUGARES
+   ================================================== */
+
+/* Adaptación de los elementos para pantallas pequeñas */
+
+@media (max-width: 768px) {
+
+    /* Ajustar el tamaño del título principal */
+
+    .pagina-lugares header h1 {
+        font-size: 2rem;
+    }
+
+    /* Ajustar el tamaño del texto de presentación */
+
+    .pagina-lugares header p {
+        font-size: 1rem;
+    }
+
+    /* Organización vertical del menú de navegación */
+
+    .pagina-lugares .navbar-nav {
+        gap: 5px;
+        text-align: left;
+        padding-top: 15px;
+    }
+
+    /* Reducir el espaciado interior de las tarjetas */
+
+    .pagina-lugares .lugar .card-body {
+        padding: 18px;
+    }
+
+    /* Ajustar los títulos de las tarjetas */
+
+    .pagina-lugares .lugar .card-title {
+        font-size: 1.3rem;
+    }
+
+    /* Ajustar el tamaño de las descripciones */
+
+    .pagina-lugares .lugar .card-text,
+    .pagina-lugares .lugar li {
+        font-size: 1rem;
+    }
+
+    /* Adaptar el botón de cambio de tema */
+
+    .pagina-lugares #themeToggle {
+        font-size: 0.8rem;
+    }
+
+}
