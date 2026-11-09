@@ -96,7 +96,15 @@
                         <img class="inicio-imagen" src="img/1.jfif"
                             alt="Paisaje representativo de la ciudad de Aurora">
 
-                        <p>En Aurora se pueden encontrar lugares históricos, espacios culturales y diferentes actividades para disfrutar durante todo el año.</p>
+                        <!-- Contenido adicional que se muestra u oculta con JavaScript -->
+                        <p id="contenido-adicional" hidden>
+                            En Aurora se pueden encontrar lugares históricos, espacios culturales y diferentes actividades para disfrutar durante todo el año.
+                        </p>
+
+                        <!-- Botón para mostrar u ocultar el contenido adicional -->
+                        <button id="btn-leer-mas" type="button" class="btn btn-outline-warning btn-sm">
+                            Leer más
+                        </button>
 
                     </div>
                 </section>
@@ -189,6 +197,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
+    <!-- El JS propio del sitio -->
+    <script src="js/main.js"></script>
 
 </body>
 </html>
