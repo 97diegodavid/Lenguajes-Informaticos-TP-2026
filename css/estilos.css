@@ -241,8 +241,9 @@ section p {
 /* Navbar: organización horizontal de los enlaces */
 
 .inicio-navbar {
-    background-color: var(--color-primario);
+    background-color: var(--color-fondo);
     padding: 15px 0;
+    border-bottom: 3px solid var(--color-secundario);
 }
 
 .inicio-navbar .navbar-brand {
