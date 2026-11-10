@@ -324,8 +324,18 @@ Se controla mediante bootstrap, pero se puede personalizar con CSS si es necesar
 
    ============================== */
 
-#informacion-contacto {
 
+.contacto h2 {
+
+    color: #6a1b9a;
+    font-family: oswald, sans-serif;
+    margin-bottom: 15px;
+}
+
+.info {
+    font-family: oswald, sans-serif;
+
+    color: var(--color-titulos);
     max-width: 900px;
 
     margin: 30px auto;
@@ -334,134 +344,66 @@ Se controla mediante bootstrap, pero se puede personalizar con CSS si es necesar
 
 }
 
-#informacion-contacto h2 {
-
-    color: #6a1b9a;
-
-    margin-bottom: 15px;
-
+.oficina {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color-primario);
 }
 
-#informacion-contacto p {
-
-    line-height: 1.6;
-
-}
-
-#informacion-contacto address {
-
-    font-style: normal;
-
+address .direccion {
+    font-family: oswald, sans-serif;
+    color:  var(--color-secundario);
+    text-align: center;
     margin-top: 20px;
+    padding: 10px;
+}
+
+.tel {
+    font-family: oswald, sans-serif;
+    color:  var(--color-secundario);
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.atencion {
+    font-family: oswald, sans-serif;
+    color: var(--color-titulos);
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.atencion ul{
+    color: var(--color-secundario);
+    list-style-type: none;
+    font-size: 1.5rem;
+}
+
+.rs {
+    font-family: oswald, sans-serif;
+    color: var(--color-primario);
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
 
 }
 
-#informacion-contacto address p {
-
-    margin: 12px 0;
-
-}
-
-#informacion-contacto a {
-
-    color: #6a1b9a;
-
+aside {
+    font-family: oswald, sans-serif;
+    color: var(--color-titulos);
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
     text-decoration: none;
-
 }
 
-#informacion-contacto a:hover {
-
-    text-decoration: underline;
-
-}
-
-/* Horarios de atención */
-
-/*sobrescribe todo lo que se hizo en la seccion de contacto, para que no afecte a las otras secciones del main
-section:not(#informacion-contacto) {
-
-    max-width: 900px;
-
-    margin: 30px auto;
-
-    padding: 25px;
-
-}*/
-
-main section h2 {
-
-    color: #6a1b9a;
-
-    margin-bottom: 15px;
-
-}
-
-main section ul {
-
-    padding-left: 25px;
-
-}
-
-main section li {
-
-    margin-bottom: 8px;
-
-}
-
-/* Redes sociales */
-
-main section a {
-
-    color: #6a1b9a;
-
-    font-weight: bold;
-
-}
-
-main section a:hover {
-
-    text-decoration: underline;
-
-}
-
-/* Información adicional */
-
-main aside {
-
-    max-width: 900px;
-
-    margin: 30px auto;
-
-    padding: 25px;
-
-    border-left: 5px solid #6a1b9a;
-
-}
-
-main aside h2 {
-
-    color: #6a1b9a;
-
-}
-
-main aside p {
-
-    line-height: 1.6;
-
-}
-
-main aside a {
-
-    color: #6a1b9a;
-
+aside p{
+    color: var(--color-secundario);
     text-decoration: none;
-
+    font-size: 1.5rem;
 }
-
-main aside a:hover {
-
-    text-decoration: underline;
-
+a{
+    text-decoration: none;
 }
-
