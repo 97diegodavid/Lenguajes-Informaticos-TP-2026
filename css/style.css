@@ -336,15 +336,11 @@ Se controla mediante bootstrap, pero se puede personalizar con CSS si es necesar
     font-family: oswald, sans-serif;
 
     color: var(--color-titulos);
-    max-width: 900px;
-
-    margin: 30px auto;
-
-    padding: 25px;
+    
 
 }
 
-.oficina {
+.oficina{
     font-size: 1.5rem;
     text-align: center;
     margin-bottom: 20px;
