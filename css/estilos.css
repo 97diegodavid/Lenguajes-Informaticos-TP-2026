@@ -1,5 +1,6 @@
 
 
+
 /* ==========================================================
    AURORA - HOJA DE ESTILOS UNIFICADA
    Estilos generales y estilos particulares de cada página
@@ -75,9 +76,10 @@ h1 {
 
 .imagen-ciudad {
     display: block;
-    margin: 20px auto;
+    width: 100%;
     max-width: 1920px;
-    height: 1080px;
+    height: auto;
+    margin: 20px auto;
     border-radius: 10px;
 }
 
@@ -148,8 +150,8 @@ section p {
 */
 
 /*
-Se controla mediante Bootstrap, pero se puede personalizar
-con CSS si es necesario.
+Las imágenes de características se controlan mediante Bootstrap.
+Se pueden personalizar con CSS si es necesario.
 */
 
 /* Barrios */
@@ -193,14 +195,14 @@ con CSS si es necesario.
     margin: 20px auto;
     padding: 40px;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     background-color: var(--color-fondo);
 }
 
 .mapa-texto {
     display: flex;
     flex-direction: column;
-    justify-content: top;
+    justify-content: flex-start;
     align-items: center;
     padding: 20px;
     font-family: Oswald, sans-serif;
@@ -394,7 +396,7 @@ con CSS si es necesario.
    9. TARJETAS DEL INDEX
    ========================================================== */
 
-/* Estilos generales de las secciones anteriores */
+/* Estilos generales de las secciones */
 
 .inicio-seccion {
     background-color: var(--color-tarjeta);
@@ -515,8 +517,10 @@ con CSS si es necesario.
 
 
 /* ==========================================================
-   11. CONTACTO - ESTILOS DE LA VERSIÓN ANTERIOR
+   11. CONTACTO - ESTILOS UNIFICADOS
    ========================================================== */
+
+/* Títulos */
 
 .contacto h2 {
     color: #6a1b9a;
@@ -524,10 +528,14 @@ con CSS si es necesario.
     margin-bottom: 15px;
 }
 
+/* Información general */
+
 .info {
     font-family: Oswald, sans-serif;
     color: var(--color-titulos);
 }
+
+/* Oficina */
 
 .oficina {
     font-size: 1.5rem;
@@ -535,6 +543,8 @@ con CSS si es necesario.
     margin-bottom: 20px;
     color: var(--color-primario);
 }
+
+/* Dirección */
 
 address .direccion {
     font-family: Oswald, sans-serif;
@@ -544,6 +554,8 @@ address .direccion {
     padding: 10px;
 }
 
+/* Teléfono */
+
 .tel {
     font-family: Oswald, sans-serif;
     color: var(--color-secundario);
@@ -551,6 +563,8 @@ address .direccion {
     margin-top: 20px;
     padding: 10px;
 }
+
+/* Horarios de atención */
 
 .atencion {
     font-family: Oswald, sans-serif;
@@ -566,6 +580,8 @@ address .direccion {
     font-size: 1.5rem;
 }
 
+/* Redes sociales */
+
 .rs {
     font-family: Oswald, sans-serif;
     color: var(--color-primario);
@@ -574,7 +590,9 @@ address .direccion {
     padding: 10px;
 }
 
-aside {
+/* Información adicional */
+
+.contacto aside {
     font-family: Oswald, sans-serif;
     color: var(--color-titulos);
     text-align: center;
@@ -583,11 +601,71 @@ aside {
     text-decoration: none;
 }
 
-aside p {
+.contacto aside p {
     color: var(--color-secundario);
     text-decoration: none;
     font-size: 1.5rem;
 }
+
+/* Enlaces de contacto */
+
+#informacion-contacto a {
+    color: #6a1b9a;
+    text-decoration: none;
+}
+
+.contacto a {
+    text-decoration: none;
+}
+
+.contacto a:hover {
+    text-decoration: underline;
+}
+
+/* Secciones de contacto */
+
+.contacto section h2 {
+    color: #6a1b9a;
+    margin-bottom: 15px;
+}
+
+.contacto section ul {
+    padding-left: 25px;
+}
+
+.contacto section li {
+    margin-bottom: 8px;
+}
+
+/* Enlaces de redes sociales */
+
+.contacto section a {
+    color: #6a1b9a;
+    font-weight: bold;
+}
+
+.contacto section a:hover {
+    text-decoration: underline;
+}
+
+/* Información adicional */
+
+.contacto aside {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    border-left: 5px solid #6a1b9a;
+}
+
+.contacto aside h2 {
+    color: #6a1b9a;
+}
+
+.contacto aside p {
+    line-height: 1.6;
+}
+
+/* Enlaces generales */
 
 a {
     text-decoration: none;
@@ -595,157 +673,7 @@ a {
 
 
 /* ==========================================================
-   12. CONTACTO - ESTRUCTURA ACTUALIZADA
-   ========================================================== */
-
-.contacto h2 {
-
-    color: #6a1b9a;
-    font-family: oswald, sans-serif;
-    margin-bottom: 15px;
-}
-
-.info {
-    font-family: oswald, sans-serif;
-
-    color: var(--color-titulos);
-    
-
-}
-
-.oficina{
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: 20px;
-    color: var(--color-primario);
-}
-
-address .direccion {
-    font-family: oswald, sans-serif;
-    color:  var(--color-secundario);
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-}
-
-.tel {
-    font-family: oswald, sans-serif;
-    color:  var(--color-secundario);
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-}
-
-<<<<<<< HEAD
-.atencion {
-    font-family: oswald, sans-serif;
-    color: var(--color-titulos);
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-}
-
-.atencion ul{
-    color: var(--color-secundario);
-    list-style-type: none;
-    font-size: 1.5rem;
-}
-
-.rs {
-    font-family: oswald, sans-serif;
-    color: var(--color-primario);
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-
-}
-
-aside {
-    font-family: oswald, sans-serif;
-    color: var(--color-titulos);
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-=======
-/* Enlaces de contacto */
-
-#informacion-contacto a {
-    color: #6a1b9a;
->>>>>>> f5a5746e45bdafa6235bcdbe2261a63a031d65ee
-    text-decoration: none;
-}
-
-aside p{
-    color: var(--color-secundario);
-    text-decoration: none;
-    font-size: 1.5rem;
-}
-<<<<<<< HEAD
-a{
-=======
-
-/*
-section:not(#informacion-contacto) {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 25px;
-}
-*/
-
-/* Horarios de atención y secciones */
-
-main section h2 {
-    color: #6a1b9a;
-    margin-bottom: 15px;
-}
-
-main section ul {
-    padding-left: 25px;
-}
-
-main section li {
-    margin-bottom: 8px;
-}
-
-/* Redes sociales */
-
-main section a {
-    color: #6a1b9a;
-    font-weight: bold;
-}
-
-main section a:hover {
-    text-decoration: underline;
-}
-
-/* Información adicional */
-
-main aside {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 25px;
-    border-left: 5px solid #6a1b9a;
-}
-
-main aside h2 {
-    color: #6a1b9a;
-}
-
-main aside p {
-    line-height: 1.6;
-}
-
-main aside a {
-    color: #6a1b9a;
->>>>>>> f5a5746e45bdafa6235bcdbe2261a63a031d65ee
-    text-decoration: none;
-}
-
-
-
-
-/* ==========================================================
-   13. ALINEACIÓN DE LAS BARRAS DE NAVEGACIÓN
+   12. ALINEACIÓN DE LAS BARRAS DE NAVEGACIÓN
    ========================================================== */
 
 /* Menú original */
@@ -782,7 +710,7 @@ main aside a {
 
 
 /* ==========================================================
-   14. ESTILOS DE LUGARES.HTML - LUGARES DE INTERÉS
+   13. ESTILOS DE LUGARES.HTML - LUGARES DE INTERÉS
    ========================================================== */
 
 /* Variables particulares de la página */
@@ -823,7 +751,7 @@ main aside a {
 
 
 /* ==========================================================
-   15. NAVBAR BOOTSTRAP - LUGARES
+   14. NAVBAR BOOTSTRAP - LUGARES
    ========================================================== */
 
 .pagina-lugares header .navbar {
@@ -852,7 +780,7 @@ main aside a {
 
 
 /* ==========================================================
-   16. BOTÓN DE CAMBIO DE TEMA
+   15. BOTÓN DE CAMBIO DE TEMA
    ========================================================== */
 
 .pagina-lugares #themeToggle {
@@ -867,7 +795,7 @@ main aside a {
 
 
 /* ==========================================================
-   17. CONTENIDO PRINCIPAL - LUGARES
+   16. CONTENIDO PRINCIPAL - LUGARES
    ========================================================== */
 
 .pagina-lugares main {
@@ -882,8 +810,10 @@ main aside a {
 
 
 /* ==========================================================
-   18. TARJETAS DE LUGARES TURÍSTICOS
+   17. TARJETAS DE LUGARES TURÍSTICOS
    ========================================================== */
+
+/* Tarjetas */
 
 .pagina-lugares .lugar.card {
     background-color: var(--lugares-tarjeta);
@@ -968,7 +898,7 @@ main aside a {
 
 
 /* ==========================================================
-   19. COMPONENTES BOOTSTRAP - LUGARES
+   18. COMPONENTES BOOTSTRAP - LUGARES
    ========================================================== */
 
 /* Botones principales */
@@ -1006,7 +936,7 @@ main aside a {
 
 
 /* ==========================================================
-   20. PIE DE PÁGINA - LUGARES
+   19. PIE DE PÁGINA - LUGARES
    ========================================================== */
 
 .pagina-lugares footer {
@@ -1022,7 +952,7 @@ main aside a {
 
 
 /* ==========================================================
-   21. MODO OSCURO - LUGARES
+   20. MODO OSCURO - LUGARES
    ========================================================== */
 
 .pagina-lugares.dark-mode {
@@ -1086,7 +1016,7 @@ main aside a {
 
 
 /* ==========================================================
-   22. RESPONSIVE - INDEX
+   21. RESPONSIVE - INDEX
    ========================================================== */
 
 @media (max-width: 768px) {
@@ -1128,7 +1058,7 @@ main aside a {
 
 
 /* ==========================================================
-   23. RESPONSIVE - LUGARES
+   22. RESPONSIVE - LUGARES
    ========================================================== */
 
 @media (max-width: 768px) {
@@ -1177,5 +1107,42 @@ main aside a {
     .pagina-lugares #themeToggle {
         font-size: 0.8rem;
     }
+}
 
+
+/* ==========================================================
+   23. RESPONSIVE - CIUDAD
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+    .ciudad {
+        padding: 5px 20px;
+    }
+
+    .imagen-ciudad {
+        width: 100%;
+        height: auto;
+    }
+
+    .barrios h2 {
+        font-size: 2rem;
+    }
+
+    .barrios div {
+        height: 400px;
+    }
+
+    .barrios p {
+        font-size: 1.1rem;
+    }
+
+    .mapa {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .mapa-texto {
+        padding: 10px;
+    }
 }

@@ -165,3 +165,21 @@ form.addEventListener("submit", e => {
     // limpiar el formulario después de enviar
     form.reset();
 });
+
+
+/*
+function validarFormulario(event) {
+    const nombre = document.getElementById("nombre").value.trim();
+    const apellido = document.getElementById("apellido").value.trim();
+    const mail = document.getElementById("mail").value.trim();
+    const mensaje = document.getElementById("mensaje").value.trim();
+
+    if (nombre === "" || apellido === "" || mail === "" || mensaje === "") {
+        event.preventDefault();
+        alert("Todos los campos son obligatorios.");
+        return;
+    }
+}
+
+document.getElementById("form").addEventListener("submit", validarFormulario);
+*/
