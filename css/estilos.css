@@ -1,7 +1,14 @@
 
-/* ==================================================
-   ESTILOS GENERALES COMPARTIDOS
-   ================================================== */
+
+/* ==========================================================
+   AURORA - HOJA DE ESTILOS UNIFICADA
+   Estilos generales y estilos particulares de cada página
+   ========================================================== */
+
+
+/* ==========================================================
+   1. VARIABLES Y ESTILOS GENERALES COMPARTIDOS
+   ========================================================== */
 
 * {
     box-sizing: border-box;
@@ -23,9 +30,10 @@ main {
     text-decoration: none;
 }
 
-/* ==================================================
-   ESTILOS DEL MENÚ COMPARTIDO
-   ================================================== */
+
+/* ==========================================================
+   2. MENÚ ORIGINAL COMPARTIDO
+   ========================================================== */
 
 .menu {
     background-color: var(--color-primario);
@@ -35,6 +43,7 @@ main {
     display: flex;
     gap: 20px;
     list-style: none;
+    justify-content: center;
 }
 
 .menu a {
@@ -48,9 +57,12 @@ main {
     color: var(--color-secundario);
 }
 
-/* ==================================================
-   ESTILOS DE LA SECCIÓN CIUDAD
-   ================================================== */
+
+/* ==========================================================
+   3. ESTILOS DE CIUDAD.HTML
+   ========================================================== */
+
+/* Títulos generales */
 
 h1 {
     font-family: Oswald, sans-serif;
@@ -59,6 +71,8 @@ h1 {
     margin-top: 100px;
 }
 
+/* Imagen principal de la ciudad */
+
 .imagen-ciudad {
     display: block;
     margin: 20px auto;
@@ -66,6 +80,8 @@ h1 {
     height: 1080px;
     border-radius: 10px;
 }
+
+/* Sección ciudad */
 
 .ciudad {
     background-color: var(--color-secundario);
@@ -88,6 +104,8 @@ section p {
     margin-top: 40px;
 }
 
+/* Información de la ciudad */
+
 .informacion-ciudad {
     font-family: Oswald, sans-serif;
     color: var(--color-texto-principal);
@@ -105,6 +123,8 @@ section p {
 .informacion-ciudad dd {
     font-size: 1.3rem;
 }
+
+/* Características */
 
 .caracteristicas {
     color: var(--color-texto-principal);
@@ -126,6 +146,13 @@ section p {
     margin: 20px 0;
 }
 */
+
+/*
+Se controla mediante Bootstrap, pero se puede personalizar
+con CSS si es necesario.
+*/
+
+/* Barrios */
 
 .barrios {
     display: flex;
@@ -160,6 +187,8 @@ section p {
     object-fit: cover;
 }
 
+/* Mapa */
+
 .mapa {
     margin: 20px auto;
     padding: 40px;
@@ -190,11 +219,12 @@ section p {
     max-width: 400px;
 }
 
-/* ==================================================
-   ESTILOS DEL INDEX.HTML - PÁGINA DE INICIO
-   ================================================== */
 
-/* Estilos generales de la página de inicio */
+/* ==========================================================
+   4. ESTILOS DE INDEX.HTML - PÁGINA DE INICIO
+   ========================================================== */
+
+/* Página de inicio */
 
 .pagina-inicio {
     background-color: var(--color-fondo);
@@ -204,7 +234,7 @@ section p {
     line-height: 1.6;
 }
 
-/* Encabezado de la página */
+/* Encabezado */
 
 .inicio-header {
     background-color: var(--color-primario);
@@ -234,11 +264,10 @@ section p {
     margin: 0 auto 25px;
 }
 
-/* ==================================================
-   ETAPA 3 - FLEXBOX
-   ================================================== */
 
-/* Navbar: organización horizontal de los enlaces */
+/* ==========================================================
+   5. NAVEGACIÓN BOOTSTRAP - INDEX
+   ========================================================== */
 
 .inicio-navbar {
     background-color: var(--color-fondo);
@@ -259,6 +288,7 @@ section p {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
 }
 
 .inicio-navbar .nav-link {
@@ -272,7 +302,11 @@ section p {
     color: var(--color-titulos);
 }
 
-/* En pantallas grandes, los enlaces se muestran horizontalmente */
+.inicio-navbar .navbar-collapse {
+    justify-content: center;
+}
+
+/* Pantallas grandes */
 
 @media (min-width: 992px) {
     .inicio-navbar .navbar-nav {
@@ -280,7 +314,12 @@ section p {
     }
 }
 
-/* Listas de la página: Flexbox con ajuste de elementos */
+
+/* ==========================================================
+   6. LISTAS DE LA PÁGINA DE INICIO
+   ========================================================== */
+
+/* Listas Flexbox */
 
 .inicio-lista {
     display: flex;
@@ -294,8 +333,6 @@ section p {
     border-radius: 10px;
 }
 
-/* Cada elemento puede crecer y adaptarse al espacio disponible */
-
 .inicio-lista li {
     flex: 1 1 220px;
     background-color: var(--color-tarjeta);
@@ -304,17 +341,31 @@ section p {
     line-height: 1.6;
 }
 
-/* ==================================================
-   ETAPA 3 - POSICIONAMIENTO
-   ================================================== */
+/* Listas de la versión anterior */
 
-/* La presentación funciona como referencia para el badge */
-
-.inicio-presentacion {
-    position: relative;
+.inicio-seccion ul:not(.inicio-lista),
+.inicio-seccion ol {
+    background-color: var(--color-tarjeta) !important;
+    color: var(--color-texto-principal) !important;
+    margin: 15px 0 25px 25px;
+    padding: 15px 20px 15px 40px;
+    border-radius: 10px;
 }
 
-/* Badge de Bootstrap ubicado en la parte inferior derecha */
+.inicio-seccion ul:not(.inicio-lista) li,
+.inicio-seccion ol li {
+    background-color: var(--color-tarjeta) !important;
+    color: var(--color-texto-principal) !important;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================================
+   7. POSICIONAMIENTO - INDEX
+   ========================================================== */
+
+/* Badge de Bootstrap */
 
 .inicio-badge {
     position: absolute;
@@ -326,17 +377,32 @@ section p {
     padding: 8px 12px;
 }
 
-/* ==================================================
-   ESTILOS DE LAS TARJETAS DEL INDEX
-   ================================================== */
 
-/* Contenido principal */
+/* ==========================================================
+   8. CONTENIDO PRINCIPAL - INDEX
+   ========================================================== */
 
 .inicio-main {
     width: 100%;
     max-width: 1100px;
     margin: 40px auto;
     padding: 0 12px;
+}
+
+
+/* ==========================================================
+   9. TARJETAS DEL INDEX
+   ========================================================== */
+
+/* Estilos generales de las secciones anteriores */
+
+.inicio-seccion {
+    background-color: var(--color-tarjeta);
+    color: var(--color-texto-principal);
+    padding: 35px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    border-left: 8px solid var(--color-secundario);
 }
 
 /* Personalización de las cards de Bootstrap */
@@ -352,7 +418,7 @@ section p {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
 }
 
-/* Espaciado interior de las tarjetas */
+/* Espaciado interior */
 
 .inicio-seccion .card-body {
     padding: 35px;
@@ -410,7 +476,7 @@ section p {
     text-decoration: underline;
 }
 
-/* Personalización del botón de Bootstrap */
+/* Botones Bootstrap */
 
 .inicio-seccion .btn-outline-warning {
     color: var(--color-titulos);
@@ -423,15 +489,16 @@ section p {
     border-color: var(--color-titulos);
 }
 
-/* Selector por ID: mejora el desplazamiento hacia la sección bienvenida */
+/* Desplazamiento hacia bienvenida */
 
 #bienvenida {
     scroll-margin-top: 20px;
 }
 
-/* ==================================================
-   PIE DE PÁGINA DEL INDEX
-   ================================================== */
+
+/* ==========================================================
+   10. PIE DE PÁGINA - INDEX
+   ========================================================== */
 
 .inicio-footer {
     background-color: var(--color-primario);
@@ -446,50 +513,90 @@ section p {
     margin: 0;
 }
 
-/* ==================================================
-   RESPONSIVE - INDEX
-   ================================================== */
 
-@media (max-width: 768px) {
+/* ==========================================================
+   11. CONTACTO - ESTILOS DE LA VERSIÓN ANTERIOR
+   ========================================================== */
 
-    .inicio-header h1 {
-        font-size: 2rem;
-    }
-
-    .inicio-header p {
-        font-size: 1rem;
-    }
-
-    .inicio-main {
-        width: 100%;
-        padding: 0 12px;
-    }
-
-    .inicio-seccion .card-body {
-        padding: 22px;
-    }
-
-    .inicio-seccion h2 {
-        font-size: 1.5rem;
-    }
-
-    .inicio-seccion p {
-        font-size: 1rem;
-    }
-
-    .inicio-lista li {
-        font-size: 1rem;
-    }
-
-    .inicio-badge {
-        right: 12px;
-        bottom: 8px;
-    }
+.contacto h2 {
+    color: #6a1b9a;
+    font-family: Oswald, sans-serif;
+    margin-bottom: 15px;
 }
 
-/* ==================================================
-   CONTACTO
-   ================================================== */
+.info {
+    font-family: Oswald, sans-serif;
+    color: var(--color-titulos);
+}
+
+.oficina {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color-primario);
+}
+
+address .direccion {
+    font-family: Oswald, sans-serif;
+    color: var(--color-secundario);
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.tel {
+    font-family: Oswald, sans-serif;
+    color: var(--color-secundario);
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.atencion {
+    font-family: Oswald, sans-serif;
+    color: var(--color-titulos);
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.atencion ul {
+    color: var(--color-secundario);
+    list-style-type: none;
+    font-size: 1.5rem;
+}
+
+.rs {
+    font-family: Oswald, sans-serif;
+    color: var(--color-primario);
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+aside {
+    font-family: Oswald, sans-serif;
+    color: var(--color-titulos);
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+aside p {
+    color: var(--color-secundario);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ==========================================================
+   12. CONTACTO - ESTRUCTURA ACTUALIZADA
+   ========================================================== */
 
 .contacto h2 {
 
@@ -529,6 +636,7 @@ address .direccion {
     padding: 10px;
 }
 
+<<<<<<< HEAD
 .atencion {
     font-family: oswald, sans-serif;
     color: var(--color-titulos);
@@ -558,6 +666,12 @@ aside {
     text-align: center;
     margin-top: 20px;
     padding: 10px;
+=======
+/* Enlaces de contacto */
+
+#informacion-contacto a {
+    color: #6a1b9a;
+>>>>>>> f5a5746e45bdafa6235bcdbe2261a63a031d65ee
     text-decoration: none;
 }
 
@@ -566,28 +680,88 @@ aside p{
     text-decoration: none;
     font-size: 1.5rem;
 }
+<<<<<<< HEAD
 a{
+=======
+
+/*
+section:not(#informacion-contacto) {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+}
+*/
+
+/* Horarios de atención y secciones */
+
+main section h2 {
+    color: #6a1b9a;
+    margin-bottom: 15px;
+}
+
+main section ul {
+    padding-left: 25px;
+}
+
+main section li {
+    margin-bottom: 8px;
+}
+
+/* Redes sociales */
+
+main section a {
+    color: #6a1b9a;
+    font-weight: bold;
+}
+
+main section a:hover {
+    text-decoration: underline;
+}
+
+/* Información adicional */
+
+main aside {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    border-left: 5px solid #6a1b9a;
+}
+
+main aside h2 {
+    color: #6a1b9a;
+}
+
+main aside p {
+    line-height: 1.6;
+}
+
+main aside a {
+    color: #6a1b9a;
+>>>>>>> f5a5746e45bdafa6235bcdbe2261a63a031d65ee
     text-decoration: none;
 }
 
 
 
 
-/* ==================================================
-   ALINEACIÓN DE LAS BARRAS DE NAVEGACIÓN
-   ================================================== */
+/* ==========================================================
+   13. ALINEACIÓN DE LAS BARRAS DE NAVEGACIÓN
+   ========================================================== */
 
-/* Centrar los enlaces del menú de las páginas que usan .menu */
+/* Menú original */
+
 .menu ul {
     justify-content: center;
 }
 
-/* Centrar los enlaces de la navbar Bootstrap de Ciudad */
+/* Navbar Bootstrap de Ciudad */
+
 .menu .navbar-collapse {
     justify-content: center;
 }
 
-/* Centrar los enlaces de la navbar de Inicio */
+/* Navbar Bootstrap de Inicio */
+
 .inicio-navbar .navbar-collapse {
     justify-content: center;
 }
@@ -596,8 +770,8 @@ a{
     justify-content: center;
 }
 
+/* Navbar identificada por ID */
 
-/* Centrar los enlaces de navegación */
 #menuAurora {
     justify-content: center;
 }
@@ -606,11 +780,12 @@ a{
     margin: 0 auto;
 }
 
-/* ==================================================
-   ESTILOS DE LUGARES.HTML - LUGARES DE INTERÉS
-   ================================================== */
 
-/* Variables de colores utilizadas en la página de lugares */
+/* ==========================================================
+   14. ESTILOS DE LUGARES.HTML - LUGARES DE INTERÉS
+   ========================================================== */
+
+/* Variables particulares de la página */
 
 .pagina-lugares {
     --lugares-fondo: #f5f5f5;
@@ -626,7 +801,7 @@ a{
     transition: background-color 0.35s ease, color 0.35s ease;
 }
 
-/* Encabezado de la página */
+/* Encabezado */
 
 .pagina-lugares header {
     background-color: var(--lugares-primario);
@@ -646,7 +821,10 @@ a{
     font-size: 1.2rem;
 }
 
-/* Barra de navegación */
+
+/* ==========================================================
+   15. NAVBAR BOOTSTRAP - LUGARES
+   ========================================================== */
 
 .pagina-lugares header .navbar {
     background-color: var(--lugares-navbar) !important;
@@ -672,7 +850,10 @@ a{
     color: #c0bb6f;
 }
 
-/* Botón para cambiar entre modo claro y modo oscuro */
+
+/* ==========================================================
+   16. BOTÓN DE CAMBIO DE TEMA
+   ========================================================== */
 
 .pagina-lugares #themeToggle {
     white-space: nowrap;
@@ -684,7 +865,10 @@ a{
     transform: scale(1.05);
 }
 
-/* Contenido principal */
+
+/* ==========================================================
+   17. CONTENIDO PRINCIPAL - LUGARES
+   ========================================================== */
 
 .pagina-lugares main {
     padding-top: 20px;
@@ -696,7 +880,10 @@ a{
     color: var(--lugares-titulos);
 }
 
-/* Tarjetas de los lugares turísticos */
+
+/* ==========================================================
+   18. TARJETAS DE LUGARES TURÍSTICOS
+   ========================================================== */
 
 .pagina-lugares .lugar.card {
     background-color: var(--lugares-tarjeta);
@@ -710,13 +897,13 @@ a{
                 color 0.35s ease;
 }
 
-/* Efecto de movimiento al pasar el cursor */
+/* Efecto al pasar el cursor */
 
 .pagina-lugares .lugar.card:hover {
     transform: translateY(-5px);
 }
 
-/* Espaciado interior de las tarjetas */
+/* Organización Flexbox */
 
 .pagina-lugares .lugar .card-body {
     display: flex;
@@ -725,7 +912,7 @@ a{
     padding: 25px;
 }
 
-/* Títulos de las tarjetas */
+/* Títulos */
 
 .pagina-lugares .lugar .card-title {
     color: var(--lugares-titulos);
@@ -733,21 +920,19 @@ a{
     line-height: 1.4;
 }
 
-/* Texto descriptivo de los lugares */
+/* Descripciones */
 
 .pagina-lugares .lugar .card-text {
     color: var(--lugares-texto);
     line-height: 1.7;
 }
 
-/* Listas con información de cada lugar */
+/* Listas */
 
 .pagina-lugares .lugar ul {
     padding-left: 0;
     list-style: none;
 }
-
-/* Presentación de cada elemento de las listas */
 
 .pagina-lugares .lugar li {
     padding: 12px;
@@ -757,52 +942,36 @@ a{
     line-height: 1.6;
 }
 
-/* Resaltar los títulos dentro de las descripciones */
+/* Texto destacado */
 
 .pagina-lugares .lugar strong {
     color: var(--lugares-titulos);
 }
 
-/* ==================================================
-   ETAPA 3 - FLEXBOX
-   ================================================== */
-
-/* Organización vertical del contenido de las tarjetas */
-
-.pagina-lugares .lugar .card-body {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Mantener los botones alineados al final de las tarjetas */
+/* Botones alineados al final */
 
 .pagina-lugares .lugar .btn {
     margin-top: auto;
     align-self: stretch;
 }
 
-/* ==================================================
-   ETAPA 3 - POSICIONAMIENTO
-   ================================================== */
-
-/* Establecer las tarjetas como referencia de posicionamiento */
+/* Posicionamiento de tarjetas */
 
 .pagina-lugares .lugar.card {
     position: relative;
 }
-
-/* Posicionamiento de las etiquetas de categorías */
 
 .pagina-lugares .lugar .badge {
     position: relative;
     z-index: 1;
 }
 
-/* ==================================================
-   PERSONALIZACIÓN DE COMPONENTES BOOTSTRAP
-   ================================================== */
 
-/* Personalización de los botones principales */
+/* ==========================================================
+   19. COMPONENTES BOOTSTRAP - LUGARES
+   ========================================================== */
+
+/* Botones principales */
 
 .pagina-lugares .btn-primary {
     background-color: var(--lugares-primario);
@@ -814,7 +983,7 @@ a{
     border-color: var(--lugares-secundario);
 }
 
-/* Personalización de los botones secundarios */
+/* Botones secundarios */
 
 .pagina-lugares .btn-outline-primary {
     color: var(--lugares-titulos);
@@ -827,7 +996,7 @@ a{
     color: #ffffff;
 }
 
-/* Personalización del mensaje informativo */
+/* Mensajes informativos */
 
 .pagina-lugares .alert-info {
     background-color: #eaf0f5;
@@ -835,11 +1004,10 @@ a{
     color: var(--lugares-texto);
 }
 
-/* ==================================================
-   PIE DE PÁGINA DE LUGARES
-   ================================================== */
 
-/* Estilos del pie de página */
+/* ==========================================================
+   20. PIE DE PÁGINA - LUGARES
+   ========================================================== */
 
 .pagina-lugares footer {
     background-color: var(--lugares-primario) !important;
@@ -852,11 +1020,10 @@ a{
     color: #ffffff;
 }
 
-/* ==================================================
-   MODO OSCURO
-   ================================================== */
 
-/* Modificación de los colores cuando se activa el modo oscuro */
+/* ==========================================================
+   21. MODO OSCURO - LUGARES
+   ========================================================== */
 
 .pagina-lugares.dark-mode {
     --lugares-fondo: #090b10;
@@ -868,13 +1035,13 @@ a{
     --lugares-navbar: #090b10;
 }
 
-/* Cambiar el fondo del encabezado */
+/* Encabezado */
 
 .pagina-lugares.dark-mode header {
     background-color: var(--lugares-primario);
 }
 
-/* Cambiar el color de los enlaces de navegación */
+/* Navegación */
 
 .pagina-lugares.dark-mode .navbar-nav .nav-link {
     color: var(--lugares-texto);
@@ -885,20 +1052,20 @@ a{
     color: var(--lugares-titulos);
 }
 
-/* Cambiar los bordes y fondos de las tarjetas */
+/* Tarjetas */
 
 .pagina-lugares.dark-mode .lugar.card {
     border-color: #39334f;
     border-left-color: var(--lugares-secundario);
 }
 
-/* Cambiar el fondo de las listas */
+/* Listas */
 
 .pagina-lugares.dark-mode .lugar li {
     background-color: rgba(130, 103, 232, 0.12);
 }
 
-/* Cambiar el fondo del mensaje informativo */
+/* Mensajes informativos */
 
 .pagina-lugares.dark-mode .alert-info {
     background-color: var(--lugares-tarjeta);
@@ -906,7 +1073,7 @@ a{
     color: var(--lugares-texto);
 }
 
-/* Personalización de los botones en modo oscuro */
+/* Botones */
 
 .pagina-lugares.dark-mode .btn-primary {
     background-color: #5943a8;
@@ -917,27 +1084,68 @@ a{
     background-color: var(--lugares-secundario);
 }
 
-/* ==================================================
-   RESPONSIVE - LUGARES
-   ================================================== */
 
-/* Adaptación de los elementos para pantallas pequeñas */
+/* ==========================================================
+   22. RESPONSIVE - INDEX
+   ========================================================== */
 
 @media (max-width: 768px) {
 
-    /* Ajustar el tamaño del título principal */
+    .inicio-header h1 {
+        font-size: 2rem;
+    }
+
+    .inicio-header p {
+        font-size: 1rem;
+    }
+
+    .inicio-main {
+        width: 100%;
+        padding: 0 12px;
+    }
+
+    .inicio-seccion .card-body {
+        padding: 22px;
+    }
+
+    .inicio-seccion h2 {
+        font-size: 1.5rem;
+    }
+
+    .inicio-seccion p {
+        font-size: 1rem;
+    }
+
+    .inicio-lista li {
+        font-size: 1rem;
+    }
+
+    .inicio-badge {
+        right: 12px;
+        bottom: 8px;
+    }
+}
+
+
+/* ==========================================================
+   23. RESPONSIVE - LUGARES
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+    /* Título principal */
 
     .pagina-lugares header h1 {
         font-size: 2rem;
     }
 
-    /* Ajustar el tamaño del texto de presentación */
+    /* Texto de presentación */
 
     .pagina-lugares header p {
         font-size: 1rem;
     }
 
-    /* Organización vertical del menú de navegación */
+    /* Menú de navegación */
 
     .pagina-lugares .navbar-nav {
         gap: 5px;
@@ -945,26 +1153,26 @@ a{
         padding-top: 15px;
     }
 
-    /* Reducir el espaciado interior de las tarjetas */
+    /* Tarjetas */
 
     .pagina-lugares .lugar .card-body {
         padding: 18px;
     }
 
-    /* Ajustar los títulos de las tarjetas */
+    /* Títulos de las tarjetas */
 
     .pagina-lugares .lugar .card-title {
         font-size: 1.3rem;
     }
 
-    /* Ajustar el tamaño de las descripciones */
+    /* Descripciones */
 
     .pagina-lugares .lugar .card-text,
     .pagina-lugares .lugar li {
         font-size: 1rem;
     }
 
-    /* Adaptar el botón de cambio de tema */
+    /* Botón de cambio de tema */
 
     .pagina-lugares #themeToggle {
         font-size: 0.8rem;
