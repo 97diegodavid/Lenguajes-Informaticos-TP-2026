@@ -110,3 +110,58 @@ if (botonModoTema && iconoModoTema && textoModoTema) {
 // ==========================================
 // FIN DEL CAMBIO DE TEMA
 // ==========================================
+
+
+
+// ==========================================
+// validacion de formulario
+// ==========================================
+const form = document.getElementById("form");
+const nombre = document.getElementById("nombre");
+const apellido = document.getElementById("apellido");
+const mail = document.getElementById("mail");
+const mensaje = document.getElementById("mensaje");
+const parrafo = document.getElementById("mensajeDeError");   
+
+form.addEventListener("submit", e => {
+    e.preventDefault();
+    
+    // Limpiamos errores anteriores
+    parrafo.textContent = "";
+
+    // 1. Validar nombre
+    if (nombre.value.trim().length < 4) {
+        parrafo.textContent = "El nombre debe tener al menos 4 caracteres.";
+        parrafo.style.color = "#FF6347";
+        return;
+    }
+
+    // 2. Validar apellido
+    if (apellido.value.trim().length < 4 ) {
+        parrafo.textContent = "El apellido debe tener al menos 4 caracteres.";
+        parrafo.style.color = "#FF6347";
+        return;
+    }
+
+    // 3. Validar formato de email
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!regexEmail.test(mail.value.trim())) {
+        parrafo.textContent = "Por favor, ingrese un correo electrónico válido.";
+        parrafo.style.color = "#FF6347";
+        return;
+    }
+
+    // 4. Validar mensaje
+    if (mensaje.value.trim().length < 5) {
+        parrafo.textContent = "El mensaje debe tener al menos 5 caracteres.";
+        parrafo.style.color = "#FF6347";
+        return;
+    }
+
+    // Si pasa todas las validaciones:
+    parrafo.textContent = "¡Formulario enviado con éxito!";
+    parrafo.style.color = "#28a745";
+    
+    // limpiar el formulario después de enviar
+    form.reset();
+});
